@@ -1,6 +1,6 @@
 import { legacy_createStore as createStore } from "redux";
 
-import counter from "../reducers/counter";
+import counter from "./counter";
 
 const store = createStore(counter)
 

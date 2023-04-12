@@ -2,7 +2,7 @@
 // container
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { incCount, decCount } from "../redux/actions/counter";
+import { incCount, decCount } from "../modules/counter";
 import Counter from "../components/Counter";
 
 function CounterContainer() {
