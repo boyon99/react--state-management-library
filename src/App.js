@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Provider } from 'react-redux';
 
 // react-toolkit
 import store from './store'
 import Counter2 from './components/Counter2';
 import Posts2 from './components/Posts2';
+import Posts3 from './components/Posts3';
 
 const App = () => {
+  const [isClicked, setIsClicked] = useState()
+
   return (
     <Provider store={store}>
-      <Counter2 />
-      <Posts2 />
+      {/* <Counter2 />
+      <Posts2 /> */}
+      <button type="button" onClick={() => setIsClicked(!isClicked)}>
+        보이게하기
+      </button>
+      {isClicked ? <Posts3 /> : null}
     </Provider>
   );
 };
