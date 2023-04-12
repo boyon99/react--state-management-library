@@ -10,11 +10,11 @@ function CounterContainer() {
   const number = useSelector((state) => state);
 
   const onIncrease = () => {
-    dispatch(incCount()); // dispatch({type:INC_COUNT})
+    dispatch(incCount(3)); // dispatch({type:INC_COUNT})
   };
 
   const onDecrease = () => {
-    dispatch(decCount());
+    dispatch(decCount(2));
   };
 
   return (

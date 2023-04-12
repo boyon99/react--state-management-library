@@ -5,8 +5,8 @@ const Counter = ({ number, onIncrease, onDecrease }) => {
   return (
     <div>
       <p>{number}</p>
-      <button onClick={onIncrease}>+1</button>
-      <button onClick={onDecrease}>-1</button>
+      <button onClick={onIncrease}>+3</button>
+      <button onClick={onDecrease}>-3</button>
     </div>
   );
 };
