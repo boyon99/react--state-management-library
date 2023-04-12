@@ -4,11 +4,13 @@ import { Provider } from 'react-redux';
 // react-toolkit
 import store from './store'
 import Counter2 from './components/Counter2';
+import Posts2 from './components/Posts2';
 
 const App = () => {
   return (
     <Provider store={store}>
       <Counter2 />
+      <Posts2 />
     </Provider>
   );
 };
