@@ -7,7 +7,7 @@ import Counter from "../components/Counter";
 
 function CounterContainer() {
   const dispatch = useDispatch();
-  const number = useSelector((state) => state);
+  const number = useSelector((state) => state.counter);
 
   const onIncrease = () => {
     dispatch(incCount(3)); // dispatch({type:INC_COUNT})
