@@ -2,6 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export const postApi = createApi({
   reducerPath: 'post',
+  tagTypes: ['Post'],
   // 요청에 필요한 기본값
   baseQuery: fetchBaseQuery({
     baseUrl: process.env.REACT_APP_SERVER_URL,
@@ -10,7 +11,8 @@ export const postApi = createApi({
   endpoints: (builder) => ({
     getPosts: builder.query({ // builder.query -> get 요청
       query: () => 'posts', // VITE_SERVER_URL/posts
-      keepUnusedDataFor: 60 // 캐시 데이터 보관 시간
+      keepUnusedDataFor: 60, // 캐시 데이터 보관 시간
+      providesTags: [{ type: 'Post', id: 'List' }]
     }),
     getPost: builder.query({
       query: (postId) => `posts/${postId}`
@@ -20,7 +22,8 @@ export const postApi = createApi({
         url: 'posts',
         method: 'POST',
         body: data
-      })
+      }),
+      invalidatesTags: (result) => result ? [{ type: 'Post', id: 'List' }] : []
     }),
   })
 })
