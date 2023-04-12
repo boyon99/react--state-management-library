@@ -4,6 +4,7 @@ import { store, persistor } from './modules'
 import CounterContainer from './containers/CounterContainer';
 import UserContainer from './containers/UserContainer';
 import { PersistGate } from 'redux-persist/integration/react';
+import PostsContainer from './containers/PostsContainer';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <PersistGate persistor={persistor}>
         <CounterContainer />
         <UserContainer />
+        <PostsContainer />
       </PersistGate>
     </Provider>
   );

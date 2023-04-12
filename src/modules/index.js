@@ -2,14 +2,17 @@ import { applyMiddleware, combineReducers, compose, legacy_createStore as create
 
 import counter from "./counter";
 import user from './user'
+import posts from "./posts";
 import logger from "redux-logger";
 import storage from "redux-persist/lib/storage";
 import { persistReducer, persistStore } from "redux-persist";
+import ReduxThunk from 'redux-thunk'
 
 // reducer
 const rootReducer = combineReducers({
   counter,
-  user
+  user,
+  posts
 })
 
 // reudx persist
@@ -26,7 +29,7 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 // store
-export const store = createStore(persistedReducer, composeEnhancers(applyMiddleware(logger)));
+export const store = createStore(persistedReducer, composeEnhancers(applyMiddleware(logger, ReduxThunk)));
 // store를 영구보존하는 복사본
 export const persistor = persistStore(store)
 
