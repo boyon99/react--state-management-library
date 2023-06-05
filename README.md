@@ -69,3 +69,35 @@ react-query와 유사하다. 캐싱 기능을 지원한다.
 - Tag 활용하여 POST 요청 후 바로 GET 요청하기
 
 > https://github.com/boyon99/redux/commit/5a321e6be55dfa6e61311088f9df3be1017c7afc
+
+
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import { BrowserRouter } from "react-router-dom";
+
+// redux
+// import { Provider } from 'react-redux';
+
+// 리덕스 미들웨어
+// import { composeWithDevTools } from 'redux-devtools-extension';
+/** 
+import { applyMiddleware, legacy_createStore, compose } from '@reduxjs/toolkit';
+import logger from 'redux-logger';
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+import rootReducer from './17/modules'
+const store = legacy_createStore(rootReducer, composeEnhancers(applyMiddleware(logger)))
+*/
+// import store from './shop/store.js'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  // <Provider store={store}>
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+  // </Provider>
+);
+```
