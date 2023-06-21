@@ -12,8 +12,8 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      {/* <Counter2 />
-      <Posts2 /> */}
+      <Counter2 />
+      <Posts2 />
       <button type="button" onClick={() => setIsClicked(!isClicked)}>
         보이게하기
       </button>

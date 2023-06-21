@@ -70,11 +70,10 @@ react-query와 유사하다. 캐싱 기능을 지원한다.
 
 > https://github.com/boyon99/redux/commit/5a321e6be55dfa6e61311088f9df3be1017c7afc
 
-
 ```jsx
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 
 // redux
@@ -92,7 +91,7 @@ const store = legacy_createStore(rootReducer, composeEnhancers(applyMiddleware(l
 */
 // import store from './shop/store.js'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // <Provider store={store}>
   <BrowserRouter>
@@ -101,3 +100,21 @@ root.render(
   // </Provider>
 );
 ```
+
+## 리덕스
+
+- [redux](https://github.com/boyon99/redux)
+
+- reudx
+
+  - createStore, subscribe, getState, dispatch
+  - [vanilla-js-redux](https://codesandbox.io/s/vanilla-js-redux-5cc8ez)
+
+- react redux
+
+  - connect, useDispatch, useSelector, store, reducer, provider
+
+- redux toolKit
+
+  - configureStore, createSlice, createAsyncThunk
+    [상세코드](https://codesandbox.io/s/react-toolkit-f84yvs?file=/src/store/index.js)
