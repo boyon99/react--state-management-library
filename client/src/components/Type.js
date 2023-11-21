@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Products from './Products';
 import Options from './Options';
+import ErrorBanner from './ErrorBanner';
 
 const Type = ({ orderType }) => {
 
   const [items, setItems] = useState([]);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     loadItems(orderType);
@@ -16,7 +18,7 @@ const Type = ({ orderType }) => {
       const response = await axios.get(`http://localhost:4000/${orderType}`)
       setItems(response.data)
     } catch (e) {
-      console.log(e)
+      setError(true);
     }
   }
 
@@ -28,6 +30,10 @@ const Type = ({ orderType }) => {
       name={item.name}
       imagePath={item.imagePath} />
   ))
+
+  if (error) {
+    return <ErrorBanner />
+  }
 
   return (
     <div>
