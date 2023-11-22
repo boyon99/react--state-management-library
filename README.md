@@ -5,5 +5,4 @@
 - zustand
 - recoil
 - Mobx
-
 - redux-toolkit
