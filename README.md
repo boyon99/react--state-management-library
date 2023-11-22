@@ -2,7 +2,7 @@
 
 리액트에서 전역적으로 사용할 데이터가 있을 때 유용하며 리덕스, 리액트 라우터, styled-components 등의 라이브러리는 Context API를 기반으로 구현되어 있다.
 
-> [상세코드](https://codesandbox.io/s/react-context-api-oro1ix?file=/src/contexts/color.jsx)에서 확인해볼 수 있다.
+> [상세코드](https://codesandbox.io/s/react-context-api-oro1ix?file=/src/contexts/color.jsx)와 [레포](https://github.com/boyon99/state-management-library/tree/context)에서 구체적인 내용을 확인할 수 있다.
 
 <br/>
 
@@ -122,3 +122,21 @@ export default Context;
 ```
 
 기존에는 consumer 컴포넌트를 생성해야 했는데 useContext를 사용하면 value의 값을 바로 가져올 수 있다.
+
+# Start Project
+
+- 각각의 터미널에서 패키지 설치 후 시작하기
+
+```shell
+cd client
+npm i
+npm run start
+```
+
+```shell
+cd server
+npm i
+npm run start
+```
+
+- `context` 관련 부분은 [컨텍스트 생성 및 Provider 구현](https://github.com/boyon99/state-management-library/commit/e50baaa07e5c386f24426c1351203433feeba34a) 브랜치 부터 확인할 수 있다.
