@@ -123,6 +123,8 @@ export default Context;
 
 기존에는 consumer 컴포넌트를 생성해야 했는데 useContext를 사용하면 value의 값을 바로 가져올 수 있다.
 
+<br/>
+
 # Start Project
 
 - 각각의 터미널에서 패키지 설치 후 시작하기
