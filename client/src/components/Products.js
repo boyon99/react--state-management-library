@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Products = ({ name, imagePath, updateItemCount }) => {
+const Products = ({ name, imagePath }) => {
 
   return (
     <div style={{ textAlign: 'center' }}>
