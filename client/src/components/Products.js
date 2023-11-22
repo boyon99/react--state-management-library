@@ -1,6 +1,12 @@
 import React from 'react'
 
-const Products = ({ name, imagePath }) => {
+const Products = ({ name, imagePath, updateItemCount }) => {
+
+  // 상품 개수 변경 시 호출되는 함수
+  const handleChange = (e) => {
+    const currentValue = e.target.value;
+    updateItemCount(name, currentValue);
+  }
 
   return (
     <div style={{ textAlign: 'center' }}>
@@ -17,6 +23,7 @@ const Products = ({ name, imagePath }) => {
           name="quantity"
           min="0"
           defaultValue={0}
+          onChange={handleChange}
         />
       </form>
     </div>
